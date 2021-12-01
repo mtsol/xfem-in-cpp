@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 
-<Object filename="/root/xfem-in-cpp/scenes/Liver888Tet4.vtk" youngsModulus="100000" poissonsRatio="0.45" nIntPts="100"/>
-<Cut filename="/root/xfem-in-cpp/scenes/meshCut/CutLiver.vtk" />
-<Output outputFolder="/root/xfem-in-cpp/output/Liver/" outputConsole="0" outputVariablesInFile="0"/>
+<Object filename="/content/xfem-in-cpp/scenes/Liver888Tet4.vtk" youngsModulus="100000" poissonsRatio="0.45" nIntPts="100"/>
+<Cut filename="/content/xfem-in-cpp/scenes/meshCut/CutLiver.vtk" />
+<Output outputFolder="/content/xfem-in-cpp/output/Liver/" outputConsole="0" outputVariablesInFile="0"/>
 
 <DisplacementBC value="-7 6 4">
     <RestrictingPlane point="62.14279938  214.66700745 -435.68600464" normal="-0.690799360456673 0.578323101957288 0.433979991860399" />
