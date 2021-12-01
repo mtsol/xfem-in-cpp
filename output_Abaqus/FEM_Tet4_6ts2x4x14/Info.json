@@ -1,0 +1,12 @@
+{
+"deformedHighResolutionMesh" : 
+"/root/xfem-in-cpp/output_Abaqus/FEM_Tet4_6ts2x4x14/displacedObject/HighRes.vtk",
+"numberOfDOFs" : 
+690,
+"numberOfBranchDOFs" : 
+0,
+"numberOfSignDOFs" : 
+0,
+"numberOfOriginalDOFs" : 
+690
+}

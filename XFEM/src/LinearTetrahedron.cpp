@@ -806,7 +806,7 @@ void LinearTetrahedron::outputFromVTKContainersToVTKFile(int plotDisplaced)
 
 	vtkUnstructuredGridWriter* writerTopoDebug = vtkUnstructuredGridWriter::New();
 
-	writerTopoDebug->SetInput(myGridTopoDebug);
+	writerTopoDebug->SetInputData(myGridTopoDebug);
 	writerTopoDebug->SetFileName(filename.c_str());
 	writerTopoDebug->Write();
 

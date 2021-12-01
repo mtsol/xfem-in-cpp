@@ -1902,7 +1902,7 @@ void CutModelTopology_CGAL::outputFromVTKContainersToVTKFile(vtkPoints* pointCon
 
 	vtkUnstructuredGridWriter* writerTopoDebug = vtkUnstructuredGridWriter::New();
 
-	writerTopoDebug->SetInput(myGridTopoDebug);
+	writerTopoDebug->SetInputData(myGridTopoDebug);
 	writerTopoDebug->SetFileName(filenameTopoDebug);
 	writerTopoDebug->Write();
 
@@ -1953,7 +1953,7 @@ void CutModelTopology_CGAL::outputFromPointsToVTKFile(Points_t &points, const ch
 
 	vtkPolyDataWriter* writerTopoDebug = vtkPolyDataWriter::New();
 
-	writerTopoDebug->SetInput(myGridTopoDebug);
+	writerTopoDebug->SetInputData(myGridTopoDebug);
 	writerTopoDebug->SetFileName(filenameTopoDebug);
 	writerTopoDebug->Write();
 

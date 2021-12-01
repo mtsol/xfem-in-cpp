@@ -44,7 +44,7 @@ def main() :
     if args.installLibraries :
         print "\n\n________________________________________________________________________________"
         print "install necessary libraries\n\n"
-        libraryList = ['libeigen3-dev','libvtk5-dev','libcgal-dev','python-matplotlib','libtinyxml-dev','paraview','cmake','make']
+        libraryList = ['libeigen3-dev','libvtk6-dev','libcgal-dev','python-matplotlib','libtinyxml-dev','paraview','cmake','make']
         for curLib in libraryList :
             args.cTINL.append(curLib)
             call(args.cTINL)

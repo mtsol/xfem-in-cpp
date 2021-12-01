@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<Object filename="/root/xfem-in-cpp/scenes/meshCutObjectForEvaluation/FEM_Tet4_6ts4x8x26.vtk" youngsModulus="300000" poissonsRatio="0.35" nIntPts="1"/>
+<ReferenceObject filename="/root/xfem-in-cpp/scenes/meshRefObject/Ref_18x36x120.vtk"/>
+<Cut filename="/root/xfem-in-cpp/scenes/meshCut/noCut.vtk" />
+<Output outputFolder="/root/xfem-in-cpp/output_Abaqus/FEM_Tet4_6ts4x8x26/" outputConsole="1" outputVariablesInFile="0"/>
+
+<DisplacementBC value="0 0 0.02">
+    <RestrictingPlane point="0 0 0.199" normal="0 0 1" />
+    <RestrictingPlane point="0.001 0 0" normal="-1 0 0" />
+</DisplacementBC>
+<DisplacementBC value="0 0 0">
+    <RestrictingPlane point="0 0 0.001" normal="0 0 -1" />
+</DisplacementBC>

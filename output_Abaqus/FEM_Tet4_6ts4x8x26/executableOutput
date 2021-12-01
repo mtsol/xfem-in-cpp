@@ -1,0 +1,21 @@
+/root/xfem-in-cpp/scenes/FEM_Tet4_6ts4x8x26.xml
+_______________________________________________________________
+Object: 
+filename /root/xfem-in-cpp/scenes/meshCutObjectForEvaluation/FEM_Tet4_6ts4x8x26.vtk
+youngsModulus 300000, poissonsRatio 0.35, nIntegrationPoints 1
+Cut:
+ /root/xfem-in-cpp/scenes/meshCut/noCut.vtk
+ReferenceObject:
+ /root/xfem-in-cpp/scenes/meshRefObject/Ref_18x36x120.vtkOutput: 
+outputFolder /root/xfem-in-cpp/output_Abaqus/FEM_Tet4_6ts4x8x26/
+outputConsole 1, outputVariablesInFile 0
+DisplacementBCs: 2
+BC value 0 0 0.02 
+RestrictingPlanes 
+normal 0 0 1, point 0 0 0.199
+normal -1 0 0, point 0.001 0 0
+BC value 0 0 0 
+RestrictingPlanes 
+normal 0 0 -1, point 0 0 0.001
+ForceBCs: 0
+

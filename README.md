@@ -15,7 +15,7 @@ Using the python script (prerequisit: python installed and 1): python simplified
 
 Without using the python script:
 
-* install necessary third party libraries: sudo apt-get install libeigen3-dev libvtk5-dev libcgal-dev python-matplotlib libtinyxml-dev paraview cmake make
+* install necessary third party libraries: sudo apt-get install libeigen3-dev libvtk6-dev libcgal-dev python-matplotlib libtinyxml-dev paraview cmake make
 
 ### 3 - Compilation ###
 The compilation has been tested on Ubuntu 14.04 using g++ 4.8.2. If you encounter any problems compiling on your system, please contact ChristophJPaulus@gmail.com

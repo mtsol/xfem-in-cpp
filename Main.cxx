@@ -622,7 +622,7 @@ void deformReferenceMeshAndWriteItToFile(vtkUnstructuredGrid* referenceMesh, std
     }
 
     vtkUnstructuredGridWriter* writerTopoDebug = vtkUnstructuredGridWriter::New();
-    writerTopoDebug->SetInput(referenceMesh);
+    writerTopoDebug->SetInputData(referenceMesh);
     writerTopoDebug->SetFileName(filename.c_str());
     writerTopoDebug->Write();
 }
@@ -946,7 +946,7 @@ void lanceScene(CutProblem& curCutProblem)
     completeFilename += ".vtk";
     myGridTopoDebug->SetPoints(pointContainerVTK);
     myGridTopoDebug->SetCells(VTK_TRIANGLE, triangleContainerVTK);
-    writerTopoDebug->SetInput(myGridTopoDebug);
+    writerTopoDebug->SetInputData(myGridTopoDebug);
     writerTopoDebug->SetFileName(completeFilename.c_str());
     writerTopoDebug->Write();
     // uncut elements
@@ -956,7 +956,7 @@ void lanceScene(CutProblem& curCutProblem)
     completeFilename_uncut += ".vtk";
     myGridTopoDebug->SetPoints(pointContainerVTK_uncut);
     myGridTopoDebug->SetCells(VTK_TRIANGLE, triangleContainerVTK_uncut);
-    writerTopoDebug->SetInput(myGridTopoDebug);
+    writerTopoDebug->SetInputData(myGridTopoDebug);
     writerTopoDebug->SetFileName(completeFilename_uncut.c_str());
     writerTopoDebug->Write();
     // completely cut elements below the cut
@@ -966,7 +966,7 @@ void lanceScene(CutProblem& curCutProblem)
     completeFilename_cc_b += ".vtk";
     myGridTopoDebug->SetPoints(pointContainerVTK_completeCutBelow);
     myGridTopoDebug->SetCells(VTK_TRIANGLE, triangleContainerVTK_completeCutBelow);
-    writerTopoDebug->SetInput(myGridTopoDebug);
+    writerTopoDebug->SetInputData(myGridTopoDebug);
     writerTopoDebug->SetFileName(completeFilename_cc_b.c_str());
     writerTopoDebug->Write();
     // completely cut elements above the cut
@@ -976,7 +976,7 @@ void lanceScene(CutProblem& curCutProblem)
     completeFilename_cc_a += ".vtk";
     myGridTopoDebug->SetPoints(pointContainerVTK_completeCutAbove);
     myGridTopoDebug->SetCells(VTK_TRIANGLE, triangleContainerVTK_completeCutAbove);
-    writerTopoDebug->SetInput(myGridTopoDebug);
+    writerTopoDebug->SetInputData(myGridTopoDebug);
     writerTopoDebug->SetFileName(completeFilename_cc_a.c_str());
     writerTopoDebug->Write();
     // partially cut elements below the cut
@@ -986,7 +986,7 @@ void lanceScene(CutProblem& curCutProblem)
     completeFilename_pc_b += ".vtk";
     myGridTopoDebug->SetPoints(pointContainerVTK_partialCutBelow);
     myGridTopoDebug->SetCells(VTK_TRIANGLE, triangleContainerVTK_partialCutBelow);
-    writerTopoDebug->SetInput(myGridTopoDebug);
+    writerTopoDebug->SetInputData(myGridTopoDebug);
     writerTopoDebug->SetFileName(completeFilename_pc_b.c_str());
     writerTopoDebug->Write();
     // partially cut elements above the cut
@@ -996,7 +996,7 @@ void lanceScene(CutProblem& curCutProblem)
     completeFilename_pc_a += ".vtk";
     myGridTopoDebug->SetPoints(pointContainerVTK_partialCutAbove);
     myGridTopoDebug->SetCells(VTK_TRIANGLE, triangleContainerVTK_partialCutAbove);
-    writerTopoDebug->SetInput(myGridTopoDebug);
+    writerTopoDebug->SetInputData(myGridTopoDebug);
     writerTopoDebug->SetFileName(completeFilename_pc_a.c_str());
     writerTopoDebug->Write();
 
