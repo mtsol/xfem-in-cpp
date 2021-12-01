@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<Object filename="PATH/scenes/Liver888Tet4.vtk" youngsModulus="100000" poissonsRatio="0.45" nIntPts="100"/>
+<Cut filename="PATH/scenes/meshCut/CutLiver.vtk" />
+<Output outputFolder="PATH/output/Liver/" outputConsole="0" outputVariablesInFile="0"/>
+
+<DisplacementBC value="-7 6 4">
+    <RestrictingPlane point="62.14279938  214.66700745 -435.68600464" normal="-0.690799360456673 0.578323101957288 0.433979991860399" />
+    <RestrictingPlane point="31.44790077  216.92999268 -430.27301025" normal="0.603288580989026 0.521410028591703 0.603468698552167" />
+</DisplacementBC>
+<DisplacementBC value="7 -6 -4">
+    <RestrictingPlane point="126.91999817  168.04200745 -480.23199463" normal="0.690799360456673 -0.578323101957288 -0.433979991860399" />
+    <RestrictingPlane point="31.44790077  216.92999268 -430.27301025" normal="0.603288580989026 0.521410028591703 0.603468698552167" />
+</DisplacementBC>

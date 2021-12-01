@@ -1,0 +1,25 @@
+{
+    "name" : "Abaqus",
+    "calculateDeformations" : 1 ,
+    "folderObjects" : "meshCutObjectForEvaluation/",
+    "numberOfIntegrationPoints" : 1, 
+    "filenameCut" : "scenes/meshCut/noCut.vtk",
+    "sceneTemplate" : 
+    {
+        "filename" : "scenes/sceneTemplateForConvergence.xml",
+        "patterns" : 
+        [
+            "filenameObject","numberOfIntegrationPoints","filenameOutput","filenameCut","filenameReferenceObjectInitialPos"
+        ]
+    },
+    "variablesToRead" : 
+    [
+        "numberOfOriginalDOFs","numberOfSignDOFs","numberOfBranchDOFs","numberOfDOFs"
+    ],
+    "filenameReferenceObjectInitialPos" : "scenes/meshRefObject/Ref_18x36x120.vtk",
+    "deformedReferenceMeshName" : "HighRes.vtk",
+    "referenceSolution" : "referenceSolutions/Ref_18x36x120.vtk",
+    "outputFolder" : "outputFEM/",
+    "plotErrorLine" : 1,
+    "plotLineColor" : "r"
+}

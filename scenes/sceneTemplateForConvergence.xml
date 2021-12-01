@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<Object filename="filenameObject" youngsModulus="300000" poissonsRatio="0.35" nIntPts="numberOfIntegrationPoints"/>
+<ReferenceObject filename="filenameReferenceObjectInitialPos"/>
+<Cut filename="filenameCut" />
+<Output outputFolder="filenameOutput" outputConsole="1" outputVariablesInFile="0"/>
+
+<DisplacementBC value="0 0 0.02">
+    <RestrictingPlane point="0 0 0.199" normal="0 0 1" />
+    <RestrictingPlane point="0.001 0 0" normal="-1 0 0" />
+</DisplacementBC>
+<DisplacementBC value="0 0 0">
+    <RestrictingPlane point="0 0 0.001" normal="0 0 -1" />
+</DisplacementBC>

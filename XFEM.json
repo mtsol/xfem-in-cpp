@@ -1,0 +1,25 @@
+{
+    "name" : "XFEM",
+    "calculateDeformations" : 1,
+    "folderObjects" : "meshObjectForEvaluation/",
+    "numberOfIntegrationPoints" : 30, 
+    "filenameCut" : "scenes/meshCut/CutHorizontal.vtk",
+    "sceneTemplate" : 
+    {
+        "filename" : "scenes/sceneTemplateForConvergence.xml",
+        "patterns" : 
+        [
+            "filenameObject","numberOfIntegrationPoints","filenameOutput","filenameCut","filenameReferenceObjectInitialPos"
+        ]
+    },
+    "variablesToRead" : 
+    [
+        "numberOfOriginalDOFs","numberOfSignDOFs","numberOfBranchDOFs","numberOfDOFs"
+    ],
+    "filenameReferenceObjectInitialPos" : "scenes/meshRefObject/Ref_18x36x120.vtk",
+    "deformedReferenceMeshName" : "HighRes.vtk",
+    "referenceSolution" : "referenceSolutions/Ref_18x36x120.vtk",
+    "outputFolder" : "output/",
+    "plotErrorLine" : 1	,
+    "plotLineColor" : "b"
+}
