@@ -79,7 +79,7 @@ def main() :
         # calculation of the deformation
         if calculateDeformations and not args.plotOnly :
             print("_______________________________"+name+": Calculation start"+"________________________")
-            print datetime.now()
+            print(datetime.now())
             # get the executable
             executable = check_output(['find', args.c, '-name', 'XFEMExec'])[:-1]
             # get existent meshes
