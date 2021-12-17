@@ -28,7 +28,7 @@ def printStack(startFromTopLevel=0):
         frame = callerframerecord[0]
         info = inspect.getframeinfo(frame)
         indent=" "*(len(stack)-1-i)
-        print indent+info.filename+':'+str(info.lineno)+' : '+info.function
+        print (indent+info.filename+':'+str(info.lineno)+' : '+info.function)
 
 def addJsonSubnode(json_str,nodeNameParent,nodeName,nodeValue) :
     endPosNodeNameAbove = 0
@@ -160,7 +160,7 @@ def sortListOfStringsByNumberInString(stringList) :
         curString_re = re.search('\d{1,}',curString[::-1])	# search from the back, since we want to check the filename not the folders!
         if curString_re is None :
             printStack()
-            print "ERROR!!!!!!!!!!!!!!!!!!!!!"
+            print ("ERROR!!!!!!!!!!!!!!!!!!!!!")
         else :
            numbersInString.append(ast.literal_eval(curString_re.group(0)[::-1]))
     sortedIndexes = [i[0] for i in sorted(enumerate(numbersInString), key=lambda x:x[1])]
@@ -177,11 +177,11 @@ def RMSErrorBetweenMeshesWithSameConnect(filename1,filename2) :
     pts2, connect2, cellTypes2 = getPointsAndConnect_vtkUnstructuredGrid(filename2)
     # check whether they have the same connect
     if len(connect1) != len(connect2) :
-        print "WARNING - the meshes do not have the same connectivity"
-        print len(connect1),len(connect2)
+        print("WARNING - the meshes do not have the same connectivity")
+        print(len(connect1),len(connect2))
         return 0.0
     if len(pts1) != len(pts2) :
-        print "WARNING - the meshes do not have the same number of points"
+        print("WARNING - the meshes do not have the same number of points")
         return 0.0
     # compare the position of the points
     nPoints = len(pts1)
@@ -207,8 +207,8 @@ def main() :
 
     # show the functions if demanded
     if args.listFunctions :
-        print "\n\n________________________________________________________________________________"
-        print "functions of "+my_filename+"\n\n"
+        print("\n\n________________________________________________________________________________")
+        print("functions of "+my_filename+"\n\n")
         exec("import " + my_filename[:-3])
         functionList = dir(python_utilities) # HERE WE SHOULD ADAPT IT AS WELL, SUCH THAT THE NAME OF THE FILE CAN BE CHANGED AND IT STILL WORKS
         for curFct in functionList :
