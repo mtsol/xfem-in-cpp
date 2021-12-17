@@ -212,7 +212,7 @@ def main() :
         exec("import " + my_filename[:-3])
         functionList = dir(python_utilities) # HERE WE SHOULD ADAPT IT AS WELL, SUCH THAT THE NAME OF THE FILE CAN BE CHANGED AND IT STILL WORKS
         for curFct in functionList :
-            print curFct
+            print(curFct)
 
 if __name__ == "__main__" :
     main()
