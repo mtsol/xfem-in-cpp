@@ -73,12 +73,12 @@ def main() :
         pathScenes  = currentPath+scenes
         filenameReferenceObjectInitialPos = currentPath+filenameReferenceObjectInitialPos   
         # output
-        print "\n\n"+filenameOptions
-        print "_______________________________"+name+"___________________________________________"
+        print("\n\n"+filenameOptions)
+        print("_______________________________"+name+"___________________________________________")
 
         # calculation of the deformation
         if calculateDeformations and not args.plotOnly :
-            print "_______________________________"+name+": Calculation start"+"________________________"
+            print("_______________________________"+name+": Calculation start"+"________________________")
             print datetime.now()
             # get the executable
             executable = check_output(['find', args.c, '-name', 'XFEMExec'])[:-1]
@@ -102,9 +102,9 @@ def main() :
                         createScene(sceneTemplate,currentSceneFilename,patterns,substitutes)
                         # execution of the scene
                         call(['mkdir', '-p', filenameOutput+'displacedObject/'])
-                        print executable+' '+currentSceneFilename
-                        print "nDOF "+str(curNDOF)
-                        print datetime.now()
+                        print(executable+' '+currentSceneFilename)
+                        print("nDOF "+str(curNDOF))
+                        print(datetime.now())
                         executableOutputFilename = filenameOutput+'executableOutput'
                         f_executableOutput = open(executableOutputFilename,'w') 
                         call([executable,currentSceneFilename],stdout=f_executableOutput)
@@ -121,13 +121,13 @@ def main() :
                         f_output = open(filenameOutput,'w')
                         f_output.write(json_str)
                         f_output.close()
-            print datetime.now()
-            print "_______________________________"+name+": Calculation end"+"______________________________"
+            print(datetime.now())
+            print("_______________________________"+name+": Calculation end"+"______________________________")
 
         # comparison of the reference solution with our solution
         if plotErrorLine :
-            print "_______________________________"+name+": Plot start"+"_______________________________"
-            print datetime.now()
+            print("_______________________________"+name+": Plot start"+"_______________________________")
+            print(datetime.now())
             # get all the Info.json files that have been written in the outputfolder
             infoFiles = findToStringList('Info.json',outputFolder)
             sortedInfoFiles = sortListOfStringsByNumberInString(infoFiles)
@@ -141,17 +141,17 @@ def main() :
                 nDOFs = InfoJson["numberOfDOFs"]
                 deformedHighResolutionMesh = InfoJson["deformedHighResolutionMesh"]
                 # compare the reference mesh with the solution calculated by our implementation
-                print currentFile
-                print nDOFs
+                print(currentFile)
+                print(nDOFs)
                 RMS = RMSErrorBetweenMeshesWithSameConnect(currentPath+referenceSolution,deformedHighResolutionMesh)
-                print RMS
+                print(RMS)
                 x.append(nDOFs)
                 y.append(RMS)
             # add a new line on the plot
             ax.plot(x,y, '3-'+plotLineColor, label=name)
             plt.legend( loc='upper right')
-            print datetime.now()
-            print "_______________________________"+name+": Plot end"+"_________________________________"
+            print(datetime.now())
+            print("_______________________________"+name+": Plot end"+"_________________________________")
 
     # put the plot into a file
     # plt.show()
