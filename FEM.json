@@ -3,7 +3,7 @@
     "calculateDeformations" : 1 ,
     "folderObjects" : "meshCutObjectForEvaluation/",
     "numberOfIntegrationPoints" : 1, 
-    "filenameCut" : "scenes/meshCut/noCut.vtk",
+    "filenameCut" : "scenes/meshCut/CutLiver.vtk",
     "sceneTemplate" : 
     {
         "filename" : "scenes/sceneTemplateForConvergence.xml",
