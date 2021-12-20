@@ -84,9 +84,13 @@ def main() :
             executable = check_output(['find', args.c, '-name', 'XFEMExec'])[:-1]
             # get existent meshes
             pathMeshObject = currentPath+scenes+folderObjects
+            print(pathMeshObject)
             objectVTKs = lsToStringList(location = pathMeshObject,inputEnding = '.vtk')
+            print(objectVTKs)
             sortedObjectVTKs = sortListOfStringsByNumberInString(objectVTKs)
+            print(sortedObjectVTKs)
             filenameCut = currentPath+filenameCut
+            print(filenameCut)
             # for each vtk in folderObjects, we create a scene, lance it and analyse its output
             for curObjectVTK in sortedObjectVTKs :
         #        curObjectVTK_re = re.search('Beam_', curObjectVTK)
